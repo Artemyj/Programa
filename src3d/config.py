@@ -9,13 +9,8 @@ import sys
 _uiMainWindow = "ui/Window.ui";
 _uiAboutDialog  = "ui/About.ui";
 _uiHelpDialog  = "ui/Man.ui";
-
-
-
 ConfIni = "config.ini"
 
-
-	
 def _errorUi(str):
 	print "No such Ui: %s"%(str)
 	sys.exit(0)

@@ -1,6 +1,4 @@
-﻿#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
+﻿
 from types import * 
 from point3d import * 
 

@@ -1,6 +1,4 @@
-﻿#!/usr/bin/env python
-#?/usr/bin/env pythonw
-
+﻿
 import sys
 import src3d
 import PyQt4

@@ -1,12 +1,5 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
 import sys
-try:
-        from psyco  import * 
-        full();
-except:
-        sys.stderr.write( "There is no PSYCO ! - It's very sad!\n")
-                
+
 
 debug = __debug__ 
 debug = False;

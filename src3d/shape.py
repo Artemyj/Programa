@@ -1,6 +1,4 @@
-﻿#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
+﻿
 import math
 
 from PyQt4 import QtCore, QtGui

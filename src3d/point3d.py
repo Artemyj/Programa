@@ -1,7 +1,4 @@
-﻿#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
-blackPoolZ = 1000;
+﻿blackPoolZ = 1000;
 
 
 import PyQt4
