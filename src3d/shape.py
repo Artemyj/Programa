@@ -356,6 +356,6 @@ class Shape(QtGui.QGraphicsItem):
                         QtGui.QPen(QtGui.QColor(0, 0, 0, (self.alphaShadow * self.alpha / 255 * 100 / self.wall) / 12)))
                     side.paint2(painter, option, widget)
             except:
-                sys.stderr.write("There is err in Shape.paint()")
+                print("There is err in Shape.paint()")
 
 # --------------------------------------------------------------------------------

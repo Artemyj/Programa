@@ -192,7 +192,6 @@ class CarSystem(QtGui.QGraphicsItem):
         self.setZValue(10000)
         painter.setPen(QtGui.QPen(self.color, 1, QtCore.Qt.DashLine))
         painter.drawPath(self.toPath())
-    #  painter.drawPath(self.shape());
-    #  painter.drawRect(self.boundingRect());
+        painter.drawPath(self.shape());
+        painter.drawRect(self.boundingRect());
 
-# ----------------------------------------------------------------------------

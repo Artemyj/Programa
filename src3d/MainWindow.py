@@ -255,28 +255,24 @@ class MainWindow(QtGui.QMainWindow):
     @QtCore.pyqtSignature("double")
     def hFrom_setMaximum(self, x):
         self.hFrom.setMaximum(x)
-        # self.stepDoubleSpinBoxH.setMaximum(x-0.01)
 
     @QtCore.pyqtSignature("double")
     def tFrom_setMaximum(self, x):
         self.tFrom.setMaximum(x)
-        # self.stepDoubleSpinBoxT.setMaximum(x-0.01)
 
     @QtCore.pyqtSignature("")
     def setFuncX(self):
-        self.view.shape.funcX = self.funcXlineEdit.text();
+        self.view.shape.funcX = self.funcXlineEdit.text()
 
-    #  self.view.shape_reBuild() ;
 
     @QtCore.pyqtSignature("")
     def setFuncY(self):
-        self.view.shape.funcY = self.funcYlineEdit.text();
-        # self.view.shape.reDo() ;
+        self.view.shape.funcY = self.funcYlineEdit.text()
 
     @QtCore.pyqtSignature("")
     def setFuncZ(self):
-        self.view.shape.funcZ = self.funcZlineEdit.text();
-        # self.view.shape.reDo() ;
+        self.view.shape.funcZ = self.funcZlineEdit.text()
+
 
     @QtCore.pyqtSignature("")
     def setScript(self):
