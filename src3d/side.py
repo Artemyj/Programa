@@ -46,15 +46,15 @@ class Side(QtGui.QGraphicsItem):
 
     def genShadowMat(self):
         self.shadNodes = []
-        if (self.lamp.z <= 0):
+        if self.lamp.z <= 0:
             return
 
-        self.shadowMatrix[0][2] = -(self.lamp.x) / (self.lamp.z)
-        self.shadowMatrix[1][2] = -(self.lamp.y) / (self.lamp.z)
-        self.shadowMatrix[2][0] = -(250)
-        self.shadowMatrix[2][1] = -(250)
+        self.shadowMatrix[0][2] = -self.lamp.x / self.lamp.z
+        self.shadowMatrix[1][2] = -self.lamp.y / self.lamp.z
+        self.shadowMatrix[2][0] = -250
+        self.shadowMatrix[2][1] = -250
 
-        if (self.paral == 2):
+        if self.paral == 2:
             for node in self.nodes:
                 nd = Point3d()
                 nd.x = node.x - (self.wall - node.z) * self.lamp.x / self.lamp.z
@@ -81,13 +81,13 @@ class Side(QtGui.QGraphicsItem):
         p2 = self.nodes[0]
         self.normalVector = ((p1 - p0) ^ (p2 - p0))
 
-        if (self.normalVector == Point3d(0, 0, 0)):
+        if self.normalVector == Point3d(0, 0, 0):
             p0 = self.nodes[2]
             p1 = self.nodes[1]
             p2 = self.nodes[3]
             self.normalVector = ((p1 - p0) ^ (p2 - p0))
 
-        if (self.normalVector == Point3d(0, 0, 0)):
+        if self.normalVector == Point3d(0, 0, 0):
             p0 = self.nodes[2]
             p1 = self.nodes[0]
             p2 = self.nodes[3]
@@ -102,7 +102,7 @@ class Side(QtGui.QGraphicsItem):
         cL = ColorToPoint(self.cLamp)
         cD = ColorToPoint(self.cDiffuse)
         vectorToLamp = self.lamp
-        if (self.paral == 0):
+        if self.paral == 0:
             vectorToLamp = self.lamp - self.centerPoint
         d = abs(vectorToLamp) / 200
         L = norm(vectorToLamp)
@@ -121,13 +121,13 @@ class Side(QtGui.QGraphicsItem):
             H = Point3d()
 
         LN = L | N
-        if (self.type == 0):
+        if self.type == 0:
             RS = H | N
         else:
             RS = R | S
 
         n = self.kSpow
-        if (RS < 0):
+        if RS < 0:
             RS = 0
         else:
             RS = RS ** n
@@ -136,18 +136,18 @@ class Side(QtGui.QGraphicsItem):
 
         self.cRes = QtGui.QColor(0, 0, 0, self.alpha)
 
-        if (S | N <= 0):
-            if (LN >= 0):
+        if S | N <= 0:
+            if LN >= 0:
                 ln = LN
-            if (RS >= 0):
+            if RS >= 0:
                 rS = RS
         else:
-            if (LN <= 0):
+            if LN <= 0:
                 ln = -LN
-            if (RS <= 0):
+            if RS <= 0:
                 rS = -RS
 
-        if (self.normalVector == Point3d(0, 0, 0)):
+        if self.normalVector == Point3d(0, 0, 0):
             self.cRes = QtGui.QColor(0, 0, 0, 255)
             return
 
@@ -160,7 +160,7 @@ class Side(QtGui.QGraphicsItem):
 
         result = Point3d()
         for i in [0, 1, 2]:
-            result[i] = kA * cA[i] * cD[i] + cL[i] * (kD * cD[i] * (ln) + kS * rS) / (d * d_mult + K)
+            result[i] = kA * cA[i] * cD[i] + cL[i] * (kD * cD[i] * ln + kS * rS) / (d * d_mult + K)
 
         result = norm(result)
         self.cRes.setRedF(result[0])

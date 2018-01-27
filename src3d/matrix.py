@@ -6,7 +6,7 @@ class Matrix:
       def __init__(self, n, m):
         self.n = n
         self.m = m
-        self.vec =[]
+        self.vec = []
         for i in xrange(n):
           self.vec.append([])
           for j in xrange(m):
@@ -57,7 +57,7 @@ class Matrix:
       def unitButLast(self):
           for i in xrange(self.n - 1):
                 for j in xrange(self.m - 1):
-                        if(i == j):
+                        if i == j:
                                 self.vec[i][j] = 1
 
       def copy(self):
@@ -77,7 +77,7 @@ class Matrix:
 
       def __setitem__(self, i, value):
         if ((type(i) is IntType)
-        or (type(i) is LongType) ) \
+        or (type(i) is LongType)) \
         and ( (type(value) is ListType)
         and (i < self.n)
         and (len(value) == self.m)):   
