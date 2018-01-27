@@ -30,12 +30,12 @@ class MainWindow(QtGui.QMainWindow):
     def __init__(self, engin, *args):
         QtGui.QMainWindow.__init__(self, *args)
         uic.loadUi(ui[0], self)
-        self.aboutDialog = AboutDialog(self);
-        self.helpDialog = HelpDialog(self);
-        self.view = engin;
-        self.paintScrollArea.setWidget(self.view);
+        self.aboutDialog = AboutDialog(self)
+        self.helpDialog = HelpDialog(self)
+        self.view = engin
+        self.paintScrollArea.setWidget(self.view)
 
-        self.join = False;
+        self.join = False
 
         self.checkConnections()
         self.commonConnections()
@@ -43,26 +43,26 @@ class MainWindow(QtGui.QMainWindow):
 
     def init(self):
 
-        self.view.shape.tFromSlot(self.tFrom.value());
-        self.view.shape.hFromSlot(self.hFrom.value());
-        self.view.shape.tToSlot(self.tTo.value());
-        self.view.shape.hToSlot(self.hTo.value());
-        self.view.shape.tStepSlot(self.stepDoubleSpinBoxT.value());
-        self.view.shape.hStepSlot(self.stepDoubleSpinBoxH.value());
-        self.view.shape.funcX = self.funcXlineEdit.text();
-        self.view.shape.funcY = self.funcYlineEdit.text();
-        self.view.shape.funcZ = self.funcZlineEdit.text();
+        self.view.shape.tFromSlot(self.tFrom.value())
+        self.view.shape.hFromSlot(self.hFrom.value())
+        self.view.shape.tToSlot(self.tTo.value())
+        self.view.shape.hToSlot(self.hTo.value())
+        self.view.shape.tStepSlot(self.stepDoubleSpinBoxT.value())
+        self.view.shape.hStepSlot(self.stepDoubleSpinBoxH.value())
+        self.view.shape.funcX = self.funcXlineEdit.text()
+        self.view.shape.funcY = self.funcYlineEdit.text()
+        self.view.shape.funcZ = self.funcZlineEdit.text()
         self.view.shape_reBuild()
 
         self.setColor1(QtGui.QColor(0, 0, 127))
         self.setColor2(QtGui.QColor(255, 255, 255))
         self.setColor3(QtGui.QColor(255, 255, 127))
 
-        self.paintingNumsChange();
+        self.paintingNumsChange()
         self.lampXYZ()
 
         self.view.animate(True)
-        self.setLightMode(2);
+        self.setLightMode(2)
 
     def checkConnections(self):
         self.connect(self.tFrom, QtCore.SIGNAL("valueChanged(double)"), self.tTo_setMinimum)
@@ -276,7 +276,7 @@ class MainWindow(QtGui.QMainWindow):
 
     @QtCore.pyqtSignature("")
     def setScript(self):
-        self.view.shape.funcAll = self.plainTextEdit.toPlainText();
+        self.view.shape.funcAll = self.plainTextEdit.toPlainText()
         # self.view.shape.reDo()
 
     @QtCore.pyqtSignature("bool")

@@ -2,7 +2,7 @@ import sys
 
 
 debug = __debug__ 
-debug = False;
+debug = False
 
 if  debug :
 	from carsys  import * 

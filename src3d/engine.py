@@ -10,7 +10,7 @@ import os
 def inside(R, P, offset=QtCore.QPoint(0, 0)):
     in_X = (R.left() + offset.x() <= P.x()) and (P.x() <= R.right() + offset.x())
     in_Y = (R.top() + offset.y() <= P.y()) and (P.y() <= R.bottom() + offset.y())
-    return (in_X and in_Y)
+    return in_X and in_Y
 
 
 class Graphic(QtGui.QGraphicsView):
@@ -234,24 +234,24 @@ class Graphic(QtGui.QGraphicsView):
         self.animationIsEnable = state
 
     def timerEvent(self, event):
-        if (not self.animationIsEnable):
+        if not self.animationIsEnable:
             return
-        if (event.timerId() == self.time1):
+        if event.timerId() == self.time1:
             self.shape.setRotY(-5)
             self.shape.setRotX(-1)
             self.shape.setShiftX(math.cos(self.i))
             self.shape.setShiftY(math.sin(self.i))
             self.shape.setShiftZ(10 * math.sin(self.i))
             self.i += 0.05
-            if (self.shape.numGen == -1):
-                if (self.b == 0):
+            if self.shape.numGen == -1:
+                if self.b == 0:
                     self.time3 = self.startTimer(300)
                 self.shape.setScaleX(1.5)
                 self.shape.setScaleY(1.5)
                 self.shape.setScaleZ(1.5)
                 self.b = 1
-        elif (event.timerId() == self.time3):
-            if (self.shape.numGen == -1):
+        elif event.timerId() == self.time3:
+            if self.shape.numGen == -1:
                 event.accept()
                 print 'Figure break activated'
                 os._exit(1)
@@ -261,20 +261,20 @@ class Graphic(QtGui.QGraphicsView):
     def mousePressEvent(self, event):
         if (inside(self.carSys.boundingRect(), event.pos(),
                    QtCore.QPoint(self.size().width() / 2, self.size().height() / 2, ))):
-            if (event.buttons() == QtCore.Qt.RightButton):
+            if event.buttons() == QtCore.Qt.RightButton:
                 self.menuIn.exec_(QtGui.QCursor.pos())
-            if (event.buttons() == QtCore.Qt.LeftButton):
+            if event.buttons() == QtCore.Qt.LeftButton:
                 self.mousePressed = True
                 self.mousePressPos.setX(event.pos().x())
                 self.mousePressPos.setY(event.pos().y())
                 # print  self.mousePressPos.x()
                 event.accept()
         else:
-            if (event.buttons() == QtCore.Qt.RightButton):
+            if event.buttons() == QtCore.Qt.RightButton:
                 self.menuOut.exec_(QtGui.QCursor.pos())
 
     def mouseMoveEvent(self, event):
-        if (self.mousePressed == True):
+        if self.mousePressed == True:
             if self.rotate.isChecked():
                 self.carSys.setRotX((event.pos().x() - self.mousePressPos.x()) * 1.0)
                 self.carSys.setRotY((event.pos().y() - self.mousePressPos.y()) * 1.0)
@@ -387,14 +387,14 @@ class Graphic(QtGui.QGraphicsView):
         dScale = 0.1
         if (not inside(self.carSys.boundingRect(), event.pos(),
                        QtCore.QPoint(self.size().width() / 2, self.size().height() / 2, ))):
-            if (event.delta() > 0):
+            if event.delta() > 0:
                 if self.changeOut[0].isChecked():
                     self.carSys.setScaleX(+ dScale)
                 if self.changeOut[1].isChecked():
                     self.carSys.setScaleY(+ dScale)
                 if self.changeOut[2].isChecked():
                     self.carSys.setScaleZ(+ dScale)
-            if (event.delta() < 0):
+            if event.delta() < 0:
                 if self.changeOut[0].isChecked():
                     self.carSys.setScaleX(- dScale)
                 if self.changeOut[1].isChecked():
@@ -404,7 +404,7 @@ class Graphic(QtGui.QGraphicsView):
         if self.rotate.isChecked():
             if (inside(self.carSys.boundingRect(), event.pos(),
                        QtCore.QPoint(self.size().width() / 2, self.size().height() / 2))):
-                if (event.delta() > 0):
+                if event.delta() > 0:
                     self.carSys.setRotZ(+ dRotate)
                     self.shape.setRotZ(+ dRotate)
                 else:
@@ -412,17 +412,17 @@ class Graphic(QtGui.QGraphicsView):
                     self.shape.setRotZ(- dRotate)
                 self.reDraw()
 
-        if (not self.rotate.isChecked()):
+        if not self.rotate.isChecked():
             if (inside(self.carSys.boundingRect(), event.pos(),
                        QtCore.QPoint(self.size().width() / 2, self.size().height() / 2))):
-                if (event.delta() > 0):
+                if event.delta() > 0:
                     if self.change[0].isChecked():
                         self.shape.setScaleX(+ dScale)
                     if self.change[1].isChecked():
                         self.shape.setScaleY(+ dScale)
                     if self.change[2].isChecked():
                         self.shape.setScaleZ(+ dScale)
-                if (event.delta() < 0):
+                if event.delta() < 0:
                     if self.change[0].isChecked():
                         self.shape.setScaleX(- dScale)
                     if self.change[1].isChecked():
