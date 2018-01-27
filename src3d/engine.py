@@ -28,14 +28,8 @@ class Graphic(QtGui.QGraphicsView):
         self.setResizeAnchor(QtGui.QGraphicsView.AnchorViewCenter)
         self.setViewportUpdateMode(QtGui.QGraphicsView.FullViewportUpdate)
 
-        # self.renderText ( 100, 100, "asyhasiohfasjkhaoshfasihfasioyhfispahfashlf'alskf'")
-
-        self.carSys = CarSystem(200)
+        self.carSys = CarSystem(250)
         self.shape = Shape()
-
-        #  self.plane = Plane(0 , 2*self.size().height()/2 , -300)
-
-        #  scene.addItem(self.plane)
 
         scene.addItem(self.carSys)
         scene.addItem(self.shape)
@@ -150,9 +144,8 @@ class Graphic(QtGui.QGraphicsView):
 
     @QtCore.pyqtSignature("bool")
     def itemsPro(self, pro):
-        self.carSys.projectType = pro
+        #self.carSys.projectType = pro
         self.shape.projectType = pro
-        # self.plane.projectType = pro;
         self.updateAll()
 
     @QtCore.pyqtSignature("bool")

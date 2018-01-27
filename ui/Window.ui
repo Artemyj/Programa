@@ -617,7 +617,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>626</width>
+         <width>600</width>
          <height>574</height>
         </rect>
        </property>
@@ -2396,7 +2396,7 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="0" column="1">
+     <item row="0" column="0">
       <widget class="QScrollArea" name="scrollArea_2">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -2847,9 +2847,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-291</y>
-          <width>423</width>
-          <height>1035</height>
+          <y>-568</y>
+          <width>449</width>
+          <height>1136</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout_7">
@@ -2923,112 +2923,6 @@
             <bool>false</bool>
            </property>
            <layout class="QGridLayout" name="gridLayout_4">
-            <item row="4" column="0" colspan="2">
-             <widget class="QFrame" name="frame">
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QGridLayout" name="gridLayout_5">
-               <item row="2" column="0">
-                <widget class="QLabel" name="label_8">
-                 <property name="text">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;x&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QLineEdit" name="funcXlineEdit">
-                 <property name="text">
-                  <string>R * sin(h) * cos(t);</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QLineEdit" name="funcYlineEdit">
-                 <property name="text">
-                  <string>R * sin(h) * sin(t);</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="1">
-                <widget class="QLineEdit" name="funcZlineEdit">
-                 <property name="text">
-                  <string>R * cos(h);</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0" colspan="2">
-                <widget class="QTextEdit" name="plainTextEdit">
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
-                 <property name="html">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic; color:#0000ff;&quot;&gt;from&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;math&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic; color:#0000ff;&quot;&gt;import&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;*&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#00007f;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;R =&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#ff8800;&quot;&gt; 100.0&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#ff8800;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="cursorWidth">
-                  <number>1</number>
-                 </property>
-                 <property name="textInteractionFlags">
-                  <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0" colspan="2">
-                <widget class="QLabel" name="label_13">
-                 <property name="text">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600;&quot;&gt;Використайте &lt;/span&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600; font-style:italic;&quot;&gt;Python&lt;/span&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600;&quot;&gt; для введення своїх&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;функцій і параметрів&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="label_10">
-                 <property name="text">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;y&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0">
-                <widget class="QLabel" name="label_19">
-                 <property name="text">
-                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;z&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
             <item row="3" column="0" colspan="2">
              <widget class="QFrame" name="frame_3">
               <property name="frameShape">
@@ -3261,6 +3155,177 @@ p, li { white-space: pre-wrap; }
                 </widget>
                </item>
               </layout>
+             </widget>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="QFrame" name="frame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;x&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="funcXlineEdit">
+                 <property name="text">
+                  <string>R * sin(h) * cos(t);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="funcYlineEdit">
+                 <property name="text">
+                  <string>R * sin(h) * sin(t);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="funcZlineEdit">
+                 <property name="text">
+                  <string>R * cos(h);</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QTextEdit" name="plainTextEdit">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic; color:#0000ff;&quot;&gt;from&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;math&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; font-style:italic; color:#0000ff;&quot;&gt;import&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#00007f;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#000000;&quot;&gt;*&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#00007f;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;R =&lt;/span&gt;&lt;span style=&quot; font-size:8pt; color:#ff8800;&quot;&gt; 100.0&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#ff8800;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="cursorWidth">
+                  <number>1</number>
+                 </property>
+                 <property name="textInteractionFlags">
+                  <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="2">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600;&quot;&gt;Використайте &lt;/span&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600; font-style:italic;&quot;&gt;Python&lt;/span&gt;&lt;span style=&quot; font-size:8.25pt; font-weight:600;&quot;&gt; для введення своїх&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;функцій і параметрів&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;y&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_19">
+                 <property name="text">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;z&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; (&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)(&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#0000ff;&quot;&gt;h&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;)&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>Відстань від початку координат до картинної площини</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QSpinBox" name="z0">
+              <property name="minimum">
+               <number>-2000</number>
+              </property>
+              <property name="maximum">
+               <number>2000</number>
+              </property>
+              <property name="value">
+               <number>-89</number>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="label_20">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <italic>true</italic>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Параметри перспективної проекції</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>Відстань від початку координат до точки сходу на осі OZ</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>Паралельної осі XOY</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QSpinBox" name="z1">
+              <property name="minimum">
+               <number>-2000</number>
+              </property>
+              <property name="maximum">
+               <number>2000</number>
+              </property>
+              <property name="value">
+               <number>45</number>
+              </property>
              </widget>
             </item>
            </layout>

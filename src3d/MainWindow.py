@@ -3,9 +3,9 @@
 from PyQt4 import QtCore, QtGui, uic
 
 import xml
-import rec
 
 import config
+from PerspectiveParams import PerspectiveParam
 
 ui = config.configUi()
 
@@ -149,8 +149,18 @@ class MainWindow(QtGui.QMainWindow):
         self.connect(self.radioButton1, QtCore.SIGNAL("clicked(bool)"), self.selectMethod)
         self.connect(self.radioButton2, QtCore.SIGNAL("clicked(bool)"), self.selectMethod)
 
+        self.connect(self.z0, QtCore.SIGNAL("valueChanged(int)"), self.changez0)
+        self.connect(self.z1, QtCore.SIGNAL("valueChanged(int)"), self.changez1)
+
     def selectMethod(self):
         self.view.shape.type = self.radioButton2.isChecked()
+
+
+    def changez0(self):
+        PerspectiveParam.z0 = self.z0.value()
+
+    def changez1(self):
+        PerspectiveParam.z1 = self.z1.value()
 
     @QtCore.pyqtSignature("")
     def printView(self):
@@ -264,7 +274,6 @@ class MainWindow(QtGui.QMainWindow):
     def setFuncX(self):
         self.view.shape.funcX = self.funcXlineEdit.text()
 
-
     @QtCore.pyqtSignature("")
     def setFuncY(self):
         self.view.shape.funcY = self.funcYlineEdit.text()
@@ -273,11 +282,9 @@ class MainWindow(QtGui.QMainWindow):
     def setFuncZ(self):
         self.view.shape.funcZ = self.funcZlineEdit.text()
 
-
     @QtCore.pyqtSignature("")
     def setScript(self):
         self.view.shape.funcAll = self.plainTextEdit.toPlainText()
-        # self.view.shape.reDo()
 
     @QtCore.pyqtSignature("bool")
     def fullScreen(self, state):

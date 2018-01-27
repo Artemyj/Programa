@@ -3,6 +3,7 @@
 import PyQt4
 import math
 from types import *
+from PerspectiveParams import PerspectiveParam
 
 
 class Point3d:
@@ -114,9 +115,12 @@ class Point3d:
     def toQPointF(self, mann=0):
         if mann == 0:
             return PyQt4.QtCore.QPointF(self.x, self.y)
-        Point = Point3d(0, 0, -blackPoolZ)
-        return PyQt4.QtCore.QPointF((self.x * (Point.z - self.z) / Point.z),
-                                        (self.y * (Point.z - self.z) / Point.z))
+        if mann==1:
+            drob=PerspectiveParam.z0-self.z
+            if drob==0:
+                drob=self.z
+            return PyQt4.QtCore.QPointF((self.x * (PerspectiveParam.z0 - PerspectiveParam.z1) / (drob)),
+                                        (self.y * (PerspectiveParam.z0 - PerspectiveParam.z1) / (drob)))
 
     def affTr(self, a):
         x = self.x
