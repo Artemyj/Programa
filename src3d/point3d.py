@@ -7,14 +7,11 @@ from types import *
 
 class Point3d:
     def __init__(self, x=0, y=0, z=0):
-        assert isinstance(IntType, object)
-        if type(x) is ListType:
+        if isinstance(x, ListType):
             self.x = x[0]
             self.y = x[1]
             self.z = x[2]
-        elif ((type(x) is IntType)
-              or (type(x) is LongType)
-              or (type(x) is FloatType)):
+        elif isinstance(x,(int,long,float)):
             self.x = x
             self.y = y
             self.z = z
@@ -115,11 +112,10 @@ class Point3d:
             (self.y * (Point.z - self.z) / Point.z), self.z)
 
     def toQPointF(self, mann=0):
-        if (mann == 0):
+        if mann == 0:
             return PyQt4.QtCore.QPointF(self.x, self.y)
-        else:
-            Point = Point3d(0, 0, -blackPoolZ)
-            return PyQt4.QtCore.QPointF((self.x * (Point.z - self.z) / Point.z),
+        Point = Point3d(0, 0, -blackPoolZ)
+        return PyQt4.QtCore.QPointF((self.x * (Point.z - self.z) / Point.z),
                                         (self.y * (Point.z - self.z) / Point.z))
 
     def affTr(self, a):
