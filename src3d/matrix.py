@@ -89,7 +89,6 @@ class Matrix:
           a = Matrix(self.n , other.m)
           if( other.n != self.m  ):
                 return a
-          buff = 0.0
           for i in xrange(a.n):
                 for j in xrange(a.m):
                       buff = 0.0
@@ -97,5 +96,3 @@ class Matrix:
                         buff += self.vec[i][k]*other.vec[k][j]
                         a.vec[i][j] = buff
           return a
-
-
