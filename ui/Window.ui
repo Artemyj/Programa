@@ -2847,7 +2847,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-568</y>
+          <y>0</y>
           <width>449</width>
           <height>1136</height>
          </rect>
@@ -4651,7 +4651,7 @@ gridline-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(255, 255, 
      <normaloff>:/images/Exit.gif</normaloff>:/images/Exit.gif</iconset>
    </property>
    <property name="text">
-    <string>Quit</string>
+    <string>Вихід</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -4663,7 +4663,7 @@ gridline-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(255, 255, 
      <normaloff>:/images/printFile.gif</normaloff>:/images/printFile.gif</iconset>
    </property>
    <property name="text">
-    <string>Print to PDF ...</string>
+    <string>Друк в PDF...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+P</string>

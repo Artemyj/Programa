@@ -79,7 +79,7 @@ class Graphic(QtGui.QGraphicsView):
         self.paintShadow.setChecked(True)
         self.connect(self.paintShadow, QtCore.SIGNAL("triggered( bool )"), self.shadow)
 
-        self.perspectiva = self.menuIn.addAction(self.trUtf8("перспектива"))
+        self.perspectiva = self.menuIn.addAction(self.trUtf8("одноточкова перспектива"))
         self.perspectiva.setCheckable(True)
         self.perspectiva.setChecked(False)
         self.connect(self.perspectiva, QtCore.SIGNAL("triggered( bool )"), self.itemsPro)
