@@ -1,5 +1,4 @@
 ﻿
-
 from PyQt4 import QtCore, QtGui, uic
 
 import xml
@@ -151,6 +150,15 @@ class MainWindow(QtGui.QMainWindow):
 
         self.connect(self.z0, QtCore.SIGNAL("valueChanged(int)"), self.changez0)
         self.connect(self.z1, QtCore.SIGNAL("valueChanged(int)"), self.changez1)
+        self.connect(self.z2, QtCore.SIGNAL("valueChanged(int)"), self.changez2)
+
+        self.connect(self.x1, QtCore.SIGNAL("valueChanged(int)"), self.changex1)
+        self.connect(self.y1, QtCore.SIGNAL("valueChanged(int)"), self.changey1)
+
+        self.connect(self.x2, QtCore.SIGNAL("valueChanged(int)"), self.changex2)
+        self.connect(self.y2, QtCore.SIGNAL("valueChanged(int)"), self.changey2)
+        self.connect(self.x3, QtCore.SIGNAL("valueChanged(int)"), self.changex3)
+        self.connect(self.y3, QtCore.SIGNAL("valueChanged(int)"), self.changey3)
 
     def selectMethod(self):
         self.view.shape.type = self.radioButton2.isChecked()
@@ -158,9 +166,39 @@ class MainWindow(QtGui.QMainWindow):
 
     def changez0(self):
         PerspectiveParam.z0 = self.z0.value()
+        self.view.updateAll()
 
     def changez1(self):
         PerspectiveParam.z1 = self.z1.value()
+        self.view.updateAll()
+
+    def changez2(self):
+        PerspectiveParam.z2 = self.z2.value()
+        self.view.updateAll()
+
+    def changex1(self):
+        PerspectiveParam.x1 = self.x1.value()
+        self.view.updateAll()
+
+    def changey1(self):
+        PerspectiveParam.y1 = self.y1.value()
+        self.view.updateAll()
+
+    def changex2(self):
+        PerspectiveParam.x2 = self.x2.value()
+        self.view.updateAll()
+
+    def changey2(self):
+        PerspectiveParam.y2 = self.y2.value()
+        self.view.updateAll()
+
+    def changex3(self):
+            PerspectiveParam.x3 = self.x3.value()
+            self.view.updateAll()
+
+    def changey3(self):
+            PerspectiveParam.y3 = self.y3.value()
+            self.view.updateAll()
 
     @QtCore.pyqtSignature("")
     def printView(self):

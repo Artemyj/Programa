@@ -199,7 +199,7 @@ class Side(QtGui.QGraphicsItem):
                              100 + penWidth / 2, 100 + penWidth / 2)
 
     def paint2(self, painter, option, widget):
-        self.setZValue(- 1000000/PerspectiveParam.z1)
+        self.setZValue(self.zValue())
         self.genShadowMat()
         painter.drawPolygon(self.toShadowQPolygonF(self.projectType))
 

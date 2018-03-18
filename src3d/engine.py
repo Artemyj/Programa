@@ -1,4 +1,4 @@
-﻿from PyQt4 import QtCore, QtGui
+﻿from PyQt4 import *
 
 from carsys import *
 from shape import *
@@ -82,7 +82,17 @@ class Graphic(QtGui.QGraphicsView):
         self.perspectiva = self.menuIn.addAction(self.trUtf8("одноточкова перспектива"))
         self.perspectiva.setCheckable(True)
         self.perspectiva.setChecked(False)
-        self.connect(self.perspectiva, QtCore.SIGNAL("triggered( bool )"), self.itemsPro)
+        self.connect(self.perspectiva, QtCore.SIGNAL("triggered( bool )"), self.itemsPro1)
+
+        self.perspectiva2 = self.menuIn.addAction(self.trUtf8("двоточкова перспектива"))
+        self.perspectiva2.setCheckable(True)
+        self.perspectiva2.setChecked(False)
+        self.connect(self.perspectiva2, QtCore.SIGNAL("triggered( bool )"), self.itemsPro2)
+
+        self.perspectiva3 = self.menuIn.addAction(self.trUtf8("триточкова перспектива"))
+        self.perspectiva3.setCheckable(True)
+        self.perspectiva3.setChecked(False)
+        self.connect(self.perspectiva3, QtCore.SIGNAL("triggered( bool )"), self.itemsPro3)
 
         self.menuIn.addSeparator()
         self.ac = self.menuIn.addAction(self.trUtf8("колір осей"))
@@ -142,6 +152,30 @@ class Graphic(QtGui.QGraphicsView):
         self.change[1].setEnabled(not pro)
         self.change[2].setEnabled(not pro)
 
+    @QtCore.pyqtSignature("bool")
+    def itemsPro3(self, pro):
+        PerspectiveParam.odn = False
+        PerspectiveParam.two = False
+        PerspectiveParam.three = True
+        # self.carSys.projectType = pro
+        self.shape.projectType = pro
+        self.updateAll()
+    @QtCore.pyqtSignature("bool")
+    def itemsPro2(self, pro):
+        PerspectiveParam.odn = False
+        PerspectiveParam.two = True
+        PerspectiveParam.three = False
+        # self.carSys.projectType = pro
+        self.shape.projectType = pro
+        self.updateAll()
+    @QtCore.pyqtSignature("bool")
+    def itemsPro1(self, pro):
+        PerspectiveParam.odn=True
+        PerspectiveParam.two=False
+        PerspectiveParam.three=False
+        # self.carSys.projectType = pro
+        self.shape.projectType = pro
+        self.updateAll()
     @QtCore.pyqtSignature("bool")
     def itemsPro(self, pro):
         #self.carSys.projectType = pro

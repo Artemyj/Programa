@@ -65,7 +65,6 @@ class Shape(QtGui.QGraphicsItem):
         self.projectType = 0
         self.showNormals = False
 
-
         # SHADOW
         self.wall = 250
         self.alpha = 255
@@ -349,13 +348,13 @@ class Shape(QtGui.QGraphicsItem):
 
             try:
                 side.paint(painter, option, widget)
-                if self.shadow:
+                if self.shadow and self.wall != 0:
                     painter.setBrush(
-                        QtGui.QBrush(QtGui.QColor(0, 0, 0, (self.alphaShadow * self.alpha / 255 * 100 / self.wall))))
+                            QtGui.QBrush(QtGui.QColor(0, 0, 0, (self.alphaShadow * self.alpha / 255 * 100 / self.wall))))
                     painter.setPen(
                         QtGui.QPen(QtGui.QColor(0, 0, 0, (self.alphaShadow * self.alpha / 255 * 100 / self.wall) / 12)))
                     side.paint2(painter, option, widget)
             except:
-                print("There is err in Shape.paint()")
+                    print("There is err in Shape.paint()")
 
 # --------------------------------------------------------------------------------

@@ -54,7 +54,7 @@ class Point3d:
             raise IndexError("Point3d.__setitem__(self, Long or IntType, value)")
 
     def __cmp__(self, other):
-        if (((self.x == other.x) and (self.y == other.y) and (self.z == other.z))):
+        if (self.x == other.x) and (self.y == other.y) and (self.z == other.z):
             return 0
         return -1
 
@@ -81,7 +81,7 @@ class Point3d:
         return Point3d((self.x * other), (self.y * other), (self.z * other))
 
     def __div__(self, other):  # DANG
-        if (other != 0):
+        if other != 0:
             return Point3d((self.x / other), (self.y / other), (self.z / other))
         else:
             raise ValueError("__div__ by 'O' !!! ")
@@ -115,12 +115,29 @@ class Point3d:
     def toQPointF(self, mann=0):
         if mann == 0:
             return PyQt4.QtCore.QPointF(self.x, self.y)
-        if mann==1:
-            drob=PerspectiveParam.z0-self.z
-            if drob==0:
-                drob=self.z
-            return PyQt4.QtCore.QPointF((self.x * (PerspectiveParam.z0 - PerspectiveParam.z1) / (drob)),
-                                        (self.y * (PerspectiveParam.z0 - PerspectiveParam.z1) / (drob)))
+        if PerspectiveParam.odn:
+            return PyQt4.QtCore.QPointF((PerspectiveParam.x1 + (self.x-PerspectiveParam.x1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0)),
+                                        (PerspectiveParam.y1 + (self.y-PerspectiveParam.y1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0)))
+        if PerspectiveParam.two:
+            x=PerspectiveParam.x1 + ((self.x-PerspectiveParam.x1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0))
+            y=PerspectiveParam.y1 + ((self.y-PerspectiveParam.y1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0))
+            x1=PerspectiveParam.x2 + ((x-PerspectiveParam.x2) * PerspectiveParam.z1 / (self.z + PerspectiveParam.z1))
+            y1 = PerspectiveParam.y2 + (
+                        (y - PerspectiveParam.y2) * PerspectiveParam.z1 / (self.z + PerspectiveParam.z1))
+            return PyQt4.QtCore.QPointF(x1,y1)
+        if PerspectiveParam.three:
+            x=PerspectiveParam.x1 + ((self.x-PerspectiveParam.x1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0))
+            y=PerspectiveParam.y1 + ((self.y-PerspectiveParam.y1) * PerspectiveParam.z0 / (self.z + PerspectiveParam.z0))
+            x1=PerspectiveParam.x2 + ((x-PerspectiveParam.x2) * PerspectiveParam.z1 / (self.z + PerspectiveParam.z1))
+            y1 = PerspectiveParam.y2 + (
+                        (y - PerspectiveParam.y2) * PerspectiveParam.z1 / (self.z + PerspectiveParam.z1))
+            x2=PerspectiveParam.x3 + ((x1-PerspectiveParam.x3) * PerspectiveParam.z2 / (self.z + PerspectiveParam.z2))
+            y2=y1 = PerspectiveParam.y3 + (
+                        (y1 - PerspectiveParam.y3) * PerspectiveParam.z2 / (self.z + PerspectiveParam.z2))
+            return PyQt4.QtCore.QPointF(x2,y2)
+
+
+
 
     def affTr(self, a):
         x = self.x
